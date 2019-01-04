@@ -7,7 +7,7 @@ No-Bullshit, very (very, very) minimal CMS
 * Done
 
 # Requirements
-"pandoc" must be installed on the machine you compile your .md files on
+"pandoc" must be installed on the machine you compile your .md files on. And python should be installed for index generation
 
 # Installation
 
