@@ -5,18 +5,13 @@ import glob
 import re
 
 config_file = 'sm-cms.ini'
-
 config = configparser.ConfigParser()
-
 config.read(config_file)
-
 index_title = config['general']['IndexTitle']
-
 markdown_files = glob.glob("*.md")
 
 # remove eventual README.md file
 markdown_files.remove('README.md')
-
 # remove index file
 markdown_files.remove('index.md')
 
