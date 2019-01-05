@@ -74,4 +74,3 @@ README.md
 * add some actual error handling in scripts
 * Create simple upload script
 * think of a way to automatically add a link back to the index in the pages
-* include date in auto-generated index and maybe in page too
