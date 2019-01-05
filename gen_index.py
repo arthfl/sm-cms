@@ -29,10 +29,10 @@ for page in markdown_files:
     # get page title
     with open(page, "r") as f:
         first_line = f.readline().strip()
-        page_title = re.sub('% ', '', first_line)
+        page_title_line = re.sub('% ', '', first_line)
 
     #generate link in index
-    index_content += "* [" + page_title + "](" + page + ")\n"
+    index_content += "* [" + page_title_line + "](" + page + ")\n"
 
 index_file = open(config['general']['IndexFile'], "w")
 index_file.write(index_content)
