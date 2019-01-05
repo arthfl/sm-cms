@@ -11,9 +11,11 @@ index_title = config['general']['IndexTitle']
 markdown_files = glob.glob("*.md")
 
 # remove eventual README.md file
-markdown_files.remove('README.md')
+if 'README.md' in markdown_files:
+    markdown_files.remove('README.md')
 # remove index file
-markdown_files.remove('index.md')
+if 'index.md' in markdown_files:
+    markdown_files.remove('index.md')
 
 # sort list of pages, according to config
 if config['general']['ReverseSorting'] == 'true':
@@ -31,8 +33,9 @@ for page in markdown_files:
         first_line = f.readline().strip()
         page_title_line = re.sub('% ', '', first_line)
 
+    page_html_file = page.split(".")[0] + ".html"
     #generate link in index
-    index_content += "* [" + page_title_line + "](" + page + ")\n"
+    index_content += "* [" + page_title_line + "](" + page_html_file + ")\n"
 
 index_file = open(config['general']['IndexFile'], "w")
 index_file.write(index_content)
