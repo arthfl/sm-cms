@@ -17,7 +17,7 @@ CSS style file (default is style.css) to your webroot.
 
 # Auto-generate index
 ```bash
-./gen_index.py
+make index
 ```
 
 This will auto-generate the `index.md` file (while overwrite an existing one)
@@ -64,7 +64,7 @@ the filename.
 
 # Compile website
 ```bash
-./compile-website.sh
+make website
 ```
 
 This will generate HTML files from all markdown files in the directory, except 
